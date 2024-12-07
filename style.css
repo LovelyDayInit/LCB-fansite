@@ -1,6 +1,75 @@
-img {
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    /* Background Image */
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute; /* Fixed in the top-right corner */
+    top: 10px;
+    right: 10px;
+    z-index: 10; /* Ensure it's above the bar */
+}
+
+.logo img {
+    width: 300px; /* Adjust logo size */
+    height: auto;
+}
+
+
+
+/* Sections Styling */
+main section {
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+#about {
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent black background for contrast */
+}
+
+#features {
+    background-color: #273036; /* Matches SVG bar for consistency */
+}
+
+#contact {
+    background-color: rgba(39, 48, 54, 0.9); /* Darker shade for the final section */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(39, 48, 54, 0.9);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
 }
