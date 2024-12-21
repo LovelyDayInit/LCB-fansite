@@ -14,14 +14,17 @@ body {
 
 /* Logo Styling */
 .logo {
-    position: absolute; /* Fixed in the top-right corner */
-    top: 10px;
+    position: absolute;
+    /* Fixed in the top-right corner */
+    top: 20px;
     right: 10px;
-    z-index: 10; /* Ensure it's above the bar */
+    z-index: 10;
+    /* Ensure it's above the bar */
 }
 
 .logo img {
-    width: 300px; /* Adjust logo size */
+    width: 300px;
+    /* Adjust logo size */
     height: auto;
 }
 
@@ -35,15 +38,36 @@ main section {
 }
 
 #about {
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent black background for contrast */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent dark background */
+    color: white;
+    /* Text color */
+    border: 2px solid #f39c12;
+    /* Orange border for emphasis */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Space inside the box */
+    width: 80%;
+    /* Adjust the width of the box */
+    margin: 0 auto;
+    /* Center the box horizontally */
+    position: relative;
+    /* Allow flexibility for placement */
+    text-align: center;
+    /* Center the text */
+    z-index: 10;
+    /* Ensure it appears above other elements */
 }
 
 #features {
-    background-color: #273036; /* Matches SVG bar for consistency */
+    background-color: #273036;
+    /* Matches SVG bar for consistency */
 }
 
 #contact {
-    background-color: rgba(39, 48, 54, 0.9); /* Darker shade for the final section */
+    background-color: rgba(39, 48, 54, 0.9);
+    /* Darker shade for the final section */
 }
 
 .navbar {
@@ -72,4 +96,180 @@ main section {
 
 .nav-links a:hover {
     color: #f39c12;
+}
+
+/* Intro Box */
+.intro-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 2px solid #f39c12;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin: 200px auto 0 auto;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Ensure body and html take full height for proper layout */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Main section height */
+main {
+    position: relative;
+    height: 100%;
+    /* Full height to allow absolute positioning */
+}
+
+#features {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark background for contrast */
+    color: white;
+    border-radius: 10px;
+    /* Smooth edges */
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    /* Center the section */
+}
+
+#features ul {
+    list-style-type: none;
+    /* Remove bullet points */
+    padding: 0;
+}
+
+#features li {
+    margin: 10px 0;
+    /* Add space between items */
+    line-height: 1.6;
+    /* Improve readability */
+}
+
+#features li strong {
+    color: #f39c12;
+    /* Highlight feature titles in orange */
+}
+
+.features-section {
+    padding: 20px 40px;
+    /* Increase padding for breathing room */
+    background: rgba(0, 0, 0, 0.8);
+    /* Add more opacity to the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Add a soft shadow for depth */
+    width: 90%;
+    /* Shrinks to fit smaller screens */
+    max-width: 800px;
+    /* Prevents it from getting too large on big screens */
+}
+
+.features-section h2 {
+    font-size: 2rem;
+    /* Bigger heading for emphasis */
+}
+
+.features-section li strong {
+    font-size: 1.2rem;
+    /* Slightly larger feature title */
+}
+
+.features-section li {
+    line-height: 1.6;
+    /* Improved spacing between lines */
+}
+
+.dante-image {
+    width: 50%;
+    max-width: 1200px;
+    height: auto;
+}
+
+#dante {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent dark background */
+    border: 2px solid #f39c12;
+    /* Orange border for emphasis */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Space inside the box */
+    width: 80%;
+    /* Adjust the width of the box */
+    margin: 20px auto;
+    /* Center the box horizontally and add vertical margin */
+    text-align: center;
+    /* Center the content */
+    color: white;
+    /* Text color */
+}
+
+#sinners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between images as needed */
+}
+
+#sinners .row {
+    display: flex;
+    justify-content: center;
+    gap: 500px; /* Adjust the gap between images as needed */
+}
+
+#sinners img {
+    width: 280px; /* Adjust the width to fit 3 images per line, considering the gap */
+    max-width: auto; /* Set a maximum width for the images */
+    height: auto;
+    flex: 1 1 calc(100% / 3 - 10px); /* Ensure images are flexible and fit within the container */
+}
+
+.image-container {
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px); /* Ensure images are flexible and fit within the container */
+    max-width: 280px; /* Set a maximum width for the images */
+    margin: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.info-box {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: right 0.3s ease;
+    opacity: 0;
+}
+
+.image-container:hover .info-box {
+    right: 100%;
+    opacity: 1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .image-container {
+        flex: 1 1 calc(50% - 20px); /* Adjust to 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        flex: 1 1 calc(100% - 20px); /* Adjust to 1 image per row on very small screens */
+    }
 }
