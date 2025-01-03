@@ -5,6 +5,7 @@
     <title>Limbus Company Fansite</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -50,12 +51,52 @@
                     success—or failure.</li>
             </ul>
 
-            
+
         </section>
 
-        <section id="story">
-            <iframe width="600" height="400" src="https://www.youtube.com/embed/24ahLNHqss4"></iframe> <br>
-            <img src="assets/story.png">
+        <section id="story" class="section-slider">
+            <div class="image-slider">
+                <div class="video">
+                    <div class="video-box">
+                        <p class="video-title">Team Guide</p>
+                        <iframe width="700" height="250" src="https://www.youtube.com/embed/24ahLNHqss4"></iframe>
+                    </div>
+                    <div class="video-box">
+                        <p class="video-title">Latest Event</p>
+                        <iframe width="700" height="250" src="https://www.youtube.com/embed/Ktwyt6hMGvk"></iframe>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img width="1200" height="400" src="assets/story.png" alt="Story Image">
+                </div>
+
+                <div class="slide">
+                    <img width="1200" height="400" src="assets/gameplay.jpg" alt="Gameplay Image">
+                </div>
+
+                <div class="slide">
+                    <img width="1200" height="400" src="assets/statuses.png" alt="Statuses Image">
+                </div>
+
+                <div class="slide">
+                    <img width="1200" height="400" src="assets/combat.png" alt="Combat Image">
+                </div>
+
+                <div class="slide">
+                    <img width="1200" height="400" src="assets/fusion.png" alt="Fusion Image">
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation">
+            <div class="slider-btn active"></div>
+            <div class="slider-btn"></div>
+            <div class="slider-btn"></div>
+            <div class="slider-btn"></div>
+            <div class="slider-btn"></div>
+        </div>
+
         </section>
 
     </main>

@@ -58,6 +58,11 @@ main section {
     /* Center the text */
     z-index: 10;
     /* Ensure it appears above other elements */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 #features {
@@ -79,6 +84,11 @@ main section {
     position: sticky;
     top: 0;
     z-index: 10;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 .nav-links {
@@ -90,8 +100,14 @@ main section {
 .nav-links a {
     text-decoration: none;
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     transition: color 0.3s;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 .nav-links a:hover {
@@ -155,6 +171,11 @@ main {
 #features li strong {
     color: #f39c12;
     /* Highlight feature titles in orange */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 .features-section {
@@ -173,6 +194,11 @@ main {
 .features-section h2 {
     font-size: 2rem;
     /* Bigger heading for emphasis */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 .features-section li strong {
@@ -208,32 +234,42 @@ main {
     /* Center the content */
     color: white;
     /* Text color */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 #sinners {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Adjust the gap between images as needed */
+    gap: 150px;
+    /* Adjust the gap between images as needed */
 }
 
 #sinners .row {
     display: flex;
     justify-content: center;
-    gap: 500px; /* Adjust the gap between images as needed */
+    gap: 1500px;
+    /* Adjust the gap between images as needed */
 }
 
 #sinners img {
-    width: 280px; /* Adjust the width to fit 3 images per line, considering the gap */
-    max-width: auto; /* Set a maximum width for the images */
+    width: 280px;
+    /* Adjust the width to fit 3 images per line, considering the gap */
+    max-width: auto;
+    /* Set a maximum width for the images */
     height: auto;
-    flex: 1 1 calc(100% / 3 - 10px); /* Ensure images are flexible and fit within the container */
+    flex: 1 1 calc(100% / 3 - 10px);
+    /* Ensure images are flexible and fit within the container */
 }
 
 .image-container {
     position: relative;
-    flex: 1 1 calc(33.333% - 20px); /* Ensure images are flexible and fit within the container */
-    max-width: 280px; /* Set a maximum width for the images */
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 280px;
     margin: 10px;
 }
 
@@ -243,33 +279,213 @@ main {
     cursor: pointer;
 }
 
-.info-box {
+.info-box,
+.description-box {
     position: absolute;
-    top: 0;
-    right: -100%;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 92%;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
     border-radius: 5px;
-    transition: right 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
+    font-family: 'Ariel', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    color: #ff8800;
 }
 
-.image-container:hover .info-box {
-    right: 100%;
+.info-box {
+    bottom: 20px;
+    border: 2px solid #f39c12;
+    transform: translateY(-298px);
+}
+
+.description-box {
+    bottom: 1;
+    border: 2px solid #e6ff03;
+    transform: translateY(-150%);
+}
+
+.image-container:hover .info-box,
+.image-container:hover .description-box {
     opacity: 1;
+    transform: translateY(-300px);
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .image-container {
-        flex: 1 1 calc(50% - 20px); /* Adjust to 2 images per row on smaller screens */
+        flex: 1 1 calc(50% - 20px);
+        /* Adjust to 2 images per row on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .image-container {
-        flex: 1 1 calc(100% - 20px); /* Adjust to 1 image per row on very small screens */
+        flex: 1 1 calc(100% - 20px);
+        /* Adjust to 1 image per row on very small screens */
     }
+}
+
+.section-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.image-slider {
+    position: relative;
+    width: 825px;
+    height: 460px;
+}
+
+.slide {
+    width: 100%;
+    position: absolute;
+    clip-path: circle(0% at 0 50%);
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.navigation {
+    position: absolute;
+    display: flex;
+    bottom: -318px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-btn {
+    background-color: rgb(151, 151, 151);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+
+.slider-btn.active {
+    background-color: rgb(255, 255, 255);
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    /* Center the video boxes horizontally */
+    gap: 20px;
+    /* Add some space between the video boxes */
+    width: 100%;
+}
+
+.video-box {
+    position: relative;
+    width: 700px;
+    /* Adjust this width to make the box wider */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    padding: 20px;
+    /* Padding inside the box */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional: add a shadow for depth */
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.video-title {
+    font-family: 'Impact', sans-serif;
+    /* Use Impact for attention-grabbing text */
+    font-size: 25px;
+    /* Adjust the font size as needed */
+    margin-bottom: 10px;
+    /* Space between text and iframe */
+    color: #f1ebeb;
+    /* Adjust the color as needed */
+    text-transform: uppercase;
+    /* Make the text uppercase for more impact */
+    text-align: center;
+    /* Center the text */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    width: 100%;
+    /* Ensure the container takes full width */
+    height: 100vh;
+    /* Make the container take full viewport height */
+}
+
+.contact-form {
+    position: relative;
+    width: 700px;
+    /* Adjust this width to make the box wider */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    padding: 20px;
+    /* Padding inside the box */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional: add a shadow for depth */
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f1ebeb;
+    /* Adjust the color as needed */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12;
+    /* Adjust the button color as needed */
+    color: #fff;
+    cursor: pointer;
 }
